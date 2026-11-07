@@ -1,0 +1,395 @@
+/* =========================================================
+   Laboratory Work 9
+   Custom CSS Styles
+   Dilara Ozguder
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. TYPOGRAPHY
+   --------------------------------------------------------- */
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #263238;
+  background-color: #ffffff;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  color: #17365d;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  color: #45505b;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+
+/* ---------------------------------------------------------
+   2. LINKS
+   --------------------------------------------------------- */
+
+a {
+  color: #2f6fed;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #17365d;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #0d2745;
+}
+
+
+/* ---------------------------------------------------------
+   3. BUTTONS
+   --------------------------------------------------------- */
+
+button,
+.btn,
+.contact .php-email-form button[type="submit"] {
+  background-color: #1f4f8a;
+  color: #ffffff;
+  border: 2px solid #1f4f8a;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  box-shadow: 0 5px 14px rgba(31, 79, 138, 0.18);
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover,
+.contact .php-email-form button[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #1f4f8a;
+  border-color: #1f4f8a;
+  transform: translateY(-2px);
+}
+
+button:active,
+.btn:active,
+.contact .php-email-form button[type="submit"]:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+
+/* ---------------------------------------------------------
+   4. ABOUT SECTION
+   --------------------------------------------------------- */
+
+#about {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.about .content {
+  background-color: #f8fafc;
+  padding: 30px;
+  margin-top: 10px;
+  border: 1px solid #dfe7f2;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(23, 54, 93, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   5. RESUME SECTION
+   --------------------------------------------------------- */
+
+#resume {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.resume .resume-item {
+  background-color: #ffffff;
+  padding: 20px 22px;
+  margin-bottom: 28px;
+  border: 1px solid #dfe7f2;
+  border-left: 4px solid #2f6fed;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(23, 54, 93, 0.07);
+}
+
+
+/* ---------------------------------------------------------
+   6. PORTFOLIO SECTION
+   --------------------------------------------------------- */
+
+#portfolio {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.portfolio .portfolio-item {
+  padding: 10px;
+}
+
+.portfolio .portfolio-info {
+  background-color: #ffffff;
+  padding: 18px;
+  margin: 0 10px 20px;
+  border: 1px solid #dfe7f2;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(23, 54, 93, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   7. SELECTED COMPONENT 1: HERO CONTENT
+   --------------------------------------------------------- */
+
+.hero .container .col-lg-9 {
+  background-color: rgba(255, 255, 255, 0.90);
+  padding: 34px;
+  border: 1px solid #d9e3f0;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(23, 54, 93, 0.12);
+}
+
+
+/* ---------------------------------------------------------
+   8. SELECTED COMPONENT 2: SKILL BARS
+   --------------------------------------------------------- */
+
+.skills .progress-bar-wrap {
+  height: 12px;
+  background-color: #e7edf5;
+  border-radius: 20px;
+  box-shadow: inset 0 1px 3px rgba(23, 54, 93, 0.12);
+}
+
+.skills .progress-bar {
+  background: linear-gradient(90deg, #1f4f8a, #5793d1);
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(31, 79, 138, 0.20);
+}
+
+
+/* ---------------------------------------------------------
+   9. LAB 8 UNORDERED LIST
+   --------------------------------------------------------- */
+
+.services .container > ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0 30px;
+}
+
+.services .container > ul > li {
+  position: relative;
+  background-color: #f6f9fd;
+  padding: 10px 14px 10px 40px;
+  margin-bottom: 8px;
+  border-left: 3px solid #2f6fed;
+  border-radius: 10px;
+}
+
+.services .container > ul > li::before {
+  content: "✓";
+  position: absolute;
+  left: 14px;
+  color: #1f4f8a;
+  font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   10. LAB 8 ORDERED LIST
+   --------------------------------------------------------- */
+
+.services .container > ol {
+  list-style: none;
+  counter-reset: stages;
+  padding-left: 0;
+  margin: 15px 0 30px;
+}
+
+.services .container > ol > li {
+  counter-increment: stages;
+  position: relative;
+  background-color: #f6f9fd;
+  padding: 12px 15px 12px 50px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #dfe7f2;
+}
+
+.services .container > ol > li::before {
+  content: counter(stages);
+  position: absolute;
+  left: 12px;
+  top: 9px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  background-color: #1f4f8a;
+  color: #ffffff;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   11. NESTED LIST
+   --------------------------------------------------------- */
+
+.services .container > ol > li > ul {
+  list-style: none;
+  padding-left: 12px;
+  margin-top: 10px;
+}
+
+.services .container > ol > li > ul > li {
+  position: relative;
+  background-color: #ffffff;
+  padding: 7px 10px 7px 30px;
+  margin: 5px 0;
+  border-left: 2px dashed #8aa7cc;
+  border-radius: 6px;
+}
+
+.services .container > ol > li > ul > li::before {
+  content: "→";
+  position: absolute;
+  left: 9px;
+  color: #2f6fed;
+  font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   12. SERVICES TABLE
+   --------------------------------------------------------- */
+
+.services table {
+  width: 100%;
+  margin: 20px 0 35px;
+  border: 1px solid #d9e3f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(23, 54, 93, 0.08);
+}
+
+.services table thead th {
+  background-color: #1f4f8a !important;
+  color: #ffffff !important;
+  padding: 14px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.services table tbody td {
+  padding: 14px;
+  text-align: center;
+  vertical-align: middle;
+  border-color: #e1e7ef;
+}
+
+.services table tbody tr:nth-child(even) > * {
+  background-color: #f3f7fc !important;
+}
+
+.services table tbody tr:hover > * {
+  background-color: #e4effc !important;
+}
+
+
+/* ---------------------------------------------------------
+   13. MEDIA ELEMENTS
+   --------------------------------------------------------- */
+
+.services video,
+.services iframe,
+.services audio {
+  max-width: 100%;
+  margin-bottom: 24px;
+}
+
+.services video,
+.services iframe {
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(23, 54, 93, 0.12);
+}
+
+
+/* ---------------------------------------------------------
+   14. READABILITY AND CONTRAST
+   --------------------------------------------------------- */
+
+.section-title p,
+.about p,
+.resume p,
+.services p,
+.contact p {
+  color: #3f4d5a;
+}
+
+section {
+  overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   15. RESPONSIVE DESIGN
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .hero .container .col-lg-9 {
+    padding: 22px;
+  }
+
+  #about,
+  #resume,
+  #portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .services table thead th,
+  .services table tbody td {
+    padding: 10px;
+  }
+}
