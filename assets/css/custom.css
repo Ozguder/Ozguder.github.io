@@ -393,3 +393,32 @@ section {
     padding: 10px;
   }
 }
+
+
+/* Final presentation refinements: override template specificity. */
+:root { --default-font: "Poppins", sans-serif; --heading-color: #17365d; --accent-color: #1f4f8a; --nav-hover-color: #1f4f8a; }
+.section-title h2 { font-size: 2.2rem; }
+.resume .resume-title { color: #17365d; }
+.resume .resume-item h4 { color: #17365d; line-height: 1.5; }
+.resume .resume-item:last-child { padding-bottom: 20px; }
+.skills .progress-bar { height: 100%; }
+.about .content ul li { align-items: baseline; flex-wrap: wrap; gap: 4px; }
+.about .content ul li span { overflow-wrap: anywhere; }
+.portfolio .portfolio-item .portfolio-info { position: static; opacity: 1; margin: 12px 0 0; min-height: 170px; }
+.portfolio .portfolio-item .portfolio-info h4,
+.portfolio .portfolio-item .portfolio-info p { padding-right: 0; }
+.portfolio .portfolio-item img { width: 100%; border-radius: 12px; }
+.services video, .services iframe { display: block; width: min(100%, 600px); height: auto; aspect-ratio: 16 / 9; }
+.services iframe { border: 0; }
+.services table { table-layout: fixed; }
+.services table th, .services table td { overflow-wrap: anywhere; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #2f6fed; outline-offset: 4px; }
+@media (max-width: 575px) {
+ .services table { font-size: .85rem; }
+ .services table thead th, .services table tbody td { padding: 8px; }
+ .hero .container .col-lg-9 { width: calc(100% - 24px); }
+}
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
