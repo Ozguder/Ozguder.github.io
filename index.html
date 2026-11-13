@@ -27,7 +27,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/custom.css?v=lab11" rel="stylesheet">
+  <link href="assets/css/custom.css?v=lab12" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: MyResume
@@ -213,73 +213,46 @@
       </div>
       <div class="container">
         <div class="competency-dashboard">
-          <div class="competency-profile"><i class="bi bi-mortarboard" aria-hidden="true"></i><div><h3>Computer Engineering</h3><p>Student competency track · Example progress</p></div></div>
+          <div class="competency-profile"><i class="bi bi-mortarboard" aria-hidden="true"></i><div><h3>Computer Engineering</h3><p>Student competency track · Live progress</p></div></div>
           <!-- Total assigned XP: 60 + 40 + 70 + 50 + 40 + 50 + 40 + 50 = 400. -->
           <dl class="competency-summary">
-            <div><dt>Total XP</dt><dd>400 <small>XP</small></dd></div>
-            <div><dt>Current level</dt><dd>Level 4</dd></div>
-            <div><dt>Rank</dt><dd>Professional</dd></div>
+            <div><dt>Total XP</dt><dd><span id="competency-total-xp">140</span> <small>XP</small></dd></div>
+            <div><dt>Current level</dt><dd id="competency-level">Level 2</dd></div>
+            <div><dt>Rank</dt><dd id="competency-rank">Trainee</dd></div>
           </dl>
           <div class="competency-progress">
-            <div class="competency-progress-label"><label for="competency-xp-progress">XP progress · Highest level reached</label><strong>400 / 300 XP</strong></div>
-            <progress id="competency-xp-progress" value="300" max="300" aria-describedby="competency-xp-note">100%</progress>
-            <p id="competency-xp-note">100% · Professional starts at 300 XP. This is the highest level in the assignment; no next level is defined.</p>
+            <div class="competency-progress-label"><label for="competency-xp-progress">XP progress · Level 2 to Level 3</label><strong id="competency-progress-text">140 / 150 XP</strong></div>
+            <progress id="competency-xp-progress" value="90" max="100" aria-describedby="competency-xp-note">90%</progress>
+            <p id="competency-xp-note">90% · 10 XP to Level 3 (Specialist).</p>
           </div>
           <details class="competency-levels">
             <summary>Level and rank thresholds</summary>
             <ul><li>Level 1 · Beginner: 0–49 XP</li><li>Level 2 · Trainee: 50–149 XP</li><li>Level 3 · Specialist: 150–299 XP</li><li>Level 4 · Professional: 300+ XP</li></ul>
           </details>
-          <p class="competency-note">Total XP is the sum of assigned XP across all skills. Skill completion is tracked separately below.</p>
+          <p class="competency-note">Only Completed skills earn XP. Change a status to update your progress instantly.</p>
         </div>
         <dl class="competency-statistics" aria-label="Skill statistics">
-          <div><dt>Total skills</dt><dd>8</dd></div>
-          <div><dt>Completed skills</dt><dd>3</dd></div>
-          <div><dt>Completion percentage</dt><dd>37.5%</dd></div>
+          <div><dt>Total skills</dt><dd id="competency-total-skills">8</dd></div>
+          <div><dt>Completed skills</dt><dd id="competency-completed-skills">3</dd></div>
+          <div><dt>Completion percentage</dt><dd id="competency-completion">37.5%</dd></div>
         </dl>
-        <div class="competency-board-heading"><h3>Skill Kanban Board</h3><p>Skills organised by learning status.</p></div>
+        <div class="competency-board-heading"><h3>Skill Kanban Board</h3><p>Choose a status on any card. Changes are saved automatically in this browser.</p></div>
         <div class="competency-board">
             <div class="competency-column competency-planned" aria-labelledby="planned-heading">
               <h4 id="planned-heading">Planned <span>2 skills</span></h4>
-              <article class="competency-card">
-                <h5>JavaScript DOM Manipulation</h5>
-                <div class="competency-card-meta"><span class="competency-status">Planned</span><span class="competency-xp">60 XP</span></div>
-              </article>
-              <article class="competency-card">
-                <h5>Automated Software Testing</h5>
-                <div class="competency-card-meta"><span class="competency-status">Planned</span><span class="competency-xp">40 XP</span></div>
-              </article>
+              <div id="skills-planned"></div>
             </div>
             <div class="competency-column competency-in-progress" aria-labelledby="in-progress-heading">
               <h4 id="in-progress-heading">In Progress <span>3 skills</span></h4>
-              <article class="competency-card">
-                <h5>Python Data Analysis</h5>
-                <div class="competency-card-meta"><span class="competency-status">In Progress</span><span class="competency-xp">70 XP</span></div>
-              </article>
-              <article class="competency-card">
-                <h5>KiCad PCB Design</h5>
-                <div class="competency-card-meta"><span class="competency-status">In Progress</span><span class="competency-xp">50 XP</span></div>
-              </article>
-              <article class="competency-card">
-                <h5>Responsive CSS Layouts</h5>
-                <div class="competency-card-meta"><span class="competency-status">In Progress</span><span class="competency-xp">40 XP</span></div>
-              </article>
+              <div id="skills-in-progress"></div>
             </div>
             <div class="competency-column competency-completed" aria-labelledby="completed-heading">
               <h4 id="completed-heading">Completed <span>3 skills</span></h4>
-              <article class="competency-card">
-                <h5>Semantic HTML</h5>
-                <div class="competency-card-meta"><span class="competency-status">Completed</span><span class="competency-xp">50 XP</span></div>
-              </article>
-              <article class="competency-card">
-                <h5>Git and GitHub Pages</h5>
-                <div class="competency-card-meta"><span class="competency-status">Completed</span><span class="competency-xp">40 XP</span></div>
-              </article>
-              <article class="competency-card">
-                <h5>MATLAB Programming</h5>
-                <div class="competency-card-meta"><span class="competency-status">Completed</span><span class="competency-xp">50 XP</span></div>
-              </article>
+              <div id="skills-completed"></div>
             </div>
         </div>
+        <p id="competency-storage-note" class="competency-note" role="status"></p>
+        <noscript><p>Enable JavaScript to display and update the skill cards.</p></noscript>
       </div>
     </section><!-- /Competency Section -->
 
@@ -622,8 +595,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/custom.js?v=lab11"></script>
+  <script src="assets/js/custom.js?v=lab12"></script>
 
 </body>
 
 </html>
+
