@@ -510,3 +510,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .contact-result h4 { margin-top: 22px; font-size: 1.05rem; }
 .contact-result .rating-average { background: #edf3fc; border-radius: 10px; padding: 12px 16px; color: #17365d; font-weight: 700; }
 @media (max-width: 575px) { .lab11-form, .contact-result { padding: 18px; } .lab11-form fieldset { padding: 14px; } }
+
+/* Laboratory Work 12 — accessible status controls. */
+.competency-status-label { display: block; margin: 14px 0 5px; font-size: .75rem; font-weight: 600; color: #17365d; }
+.competency-status-select { width: 100%; min-height: 42px; padding: 8px; border: 1px solid #a9b9cb; border-radius: 8px; background: #fff; color: #17365d; font: inherit; font-size: .85rem; }
+.competency-status-select:focus-visible { outline: 3px solid #2f6fed; outline-offset: 3px; }
+
