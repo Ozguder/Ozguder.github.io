@@ -27,7 +27,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/custom.css?v=lab10" rel="stylesheet">
+  <link href="assets/css/custom.css?v=lab11" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: MyResume
@@ -549,35 +549,23 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
+            <form id="contact-form" class="lab11-form" novalidate data-aos="fade-up" data-aos-delay="200">
+<h3>Get in touch</h3><p>Share your details and rate your experience. All fields are required.</p>
+<div class="row gy-3">
+<div class="col-md-6"><label for="firstName">First name</label><input id="firstName" name="firstName" type="text" class="form-control" autocomplete="given-name" required aria-describedby="firstName-error"><p id="firstName-error" class="field-error" aria-live="polite"></p></div>
+<div class="col-md-6"><label for="lastName">Last name</label><input id="lastName" name="lastName" type="text" class="form-control" autocomplete="family-name" required aria-describedby="lastName-error"><p id="lastName-error" class="field-error" aria-live="polite"></p></div>
+<div class="col-md-6"><label for="email">Email</label><input id="email" name="email" type="email" class="form-control" autocomplete="email" required aria-describedby="email-error"><p id="email-error" class="field-error" aria-live="polite"></p></div>
+<div class="col-md-6"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" class="form-control" autocomplete="tel" required aria-describedby="phone-error phone-help" inputmode="numeric" maxlength="15" placeholder="+370 6xx xxxxx"><p id="phone-error" class="field-error" aria-live="polite"></p><p id="phone-help" class="field-help">Enter 8 mobile digits starting with 6, or the full Lithuanian number.</p></div>
+<div class="col-12"><label for="address">Address</label><textarea id="address" name="address" class="form-control" rows="3" autocomplete="street-address" required aria-describedby="address-error"></textarea><p id="address-error" class="field-error" aria-live="polite"></p></div>
+<div class="col-12"><fieldset><legend>Your feedback</legend><p class="field-help">Rate each question from 1 (lowest) to 10 (highest).</p>
+<div class="rating-field"><label for="rating1">1. How clear is the website content?</label><input id="rating1" name="rating1" class="form-control" type="number" min="1" max="10" step="1" required aria-describedby="rating1-error"><p id="rating1-error" class="field-error" aria-live="polite"></p></div>
+<div class="rating-field"><label for="rating2">2. How easy is the website to navigate?</label><input id="rating2" name="rating2" class="form-control" type="number" min="1" max="10" step="1" required aria-describedby="rating2-error"><p id="rating2-error" class="field-error" aria-live="polite"></p></div>
+<div class="rating-field"><label for="rating3">3. How would you rate the overall design?</label><input id="rating3" name="rating3" class="form-control" type="number" min="1" max="10" step="1" required aria-describedby="rating3-error"><p id="rating3-error" class="field-error" aria-live="polite"></p></div>
+</fieldset></div>
+<div class="col-12"><p id="form-help" class="field-help">Complete all fields correctly to enable Submit.</p><div class="form-actions"><button id="contact-submit" type="submit" disabled aria-describedby="form-help">Submit</button><button type="reset" class="clear-button">Clear</button></div></div>
+</div><noscript><p>Enable JavaScript to use this form.</p></noscript>
+</form>
+<section id="contact-result" class="contact-result" hidden aria-labelledby="result-title" tabindex="-1"><h3 id="result-title">Submitted details</h3><div id="contact-data"></div><h4>Average rating</h4><p id="rating-average" class="rating-average"></p><p class="field-help">This demonstration displays your data locally; it does not send an email.</p></section>
           </div><!-- End Contact Form -->
 
         </div>
@@ -634,6 +622,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js?v=lab11"></script>
 
 </body>
 
