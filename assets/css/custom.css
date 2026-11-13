@@ -486,3 +486,27 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (prefers-reduced-motion: reduce) {
   #services, .about-shape-circle, .about-shape-triangle { animation: none; }
 }
+/* Laboratory Work 11 — contact form and submitted details. */
+.lab11-form, .contact-result { padding: 28px; border: 1px solid #dfe7f2; border-radius: 18px; background: #fff; box-shadow: 0 8px 25px #17365d0d; }
+.lab11-form h3, .contact-result h3 { font-size: 1.4rem; }
+.lab11-form label { display: block; font-size: .9rem; font-weight: 600; margin-bottom: 6px; color: #17365d; }
+.lab11-form .form-control { border: 1px solid #a9b9cb; border-radius: 10px; padding: 11px 14px; color: #263238; background: #fff; }
+.lab11-form .form-control:focus { border-color: #1f4f8a; box-shadow: 0 0 0 3px #1f4f8a20; }
+.lab11-form .form-control.is-invalid { border: 2px solid #b42318; background: #fff7f6; }
+.lab11-form .field-error { color: #b42318; font-size: .8rem; margin: 5px 0 0; }
+.lab11-form .field-error:empty { display: none; }
+.contact .field-help { font-size: .8rem; margin: 6px 0 12px; color: #4c5c6c; }
+.lab11-form fieldset { padding: 20px; background: #f5f8fc; border: 1px solid #dfe7f2; border-radius: 12px; }
+.lab11-form legend { float: none; width: auto; font-size: 1.05rem; font-weight: 700; color: #17365d; margin-bottom: 8px; }
+.lab11-form .rating-field + .rating-field { margin-top: 16px; }
+.lab11-form .rating-field input { max-width: 110px; }
+.lab11-form .form-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.lab11-form button:disabled, .lab11-form button:disabled:hover { background: #e3e9f0; color: #526274; border-color: #cbd5e1; cursor: not-allowed; box-shadow: none; transform: none; }
+.lab11-form .clear-button { background: #fff; color: #1f4f8a; box-shadow: none; }
+.lab11-form .clear-button:hover { background: #edf3fc; }
+.contact-result { margin-top: 24px; border-top: 4px solid #23825d; overflow-wrap: anywhere; }
+.contact-result[hidden] { display: none; }
+.contact-result #contact-data p { margin: 0 0 8px; white-space: pre-wrap; }
+.contact-result h4 { margin-top: 22px; font-size: 1.05rem; }
+.contact-result .rating-average { background: #edf3fc; border-radius: 10px; padding: 12px 16px; color: #17365d; font-weight: 700; }
+@media (max-width: 575px) { .lab11-form, .contact-result { padding: 18px; } .lab11-form fieldset { padding: 14px; } }
